@@ -1,0 +1,4 @@
+[
+  {"FirstName": "Vic", "LastName": "Vu", "IsRegistered": true, "GPA": 3.7},
+  {"FirstName": "Sue", "LastName": "Salias", "IsRegistered": false, "GPA": 3.2}
+]

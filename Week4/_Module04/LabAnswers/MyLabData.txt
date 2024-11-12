@@ -1,0 +1,4 @@
+Bob,Smith,4.0
+Sue,Jones,3.8
+Vic,Vu,3.2
+Kat,Sung,4.0
