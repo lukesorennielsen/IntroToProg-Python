@@ -136,8 +136,10 @@ class IO:
         """
         print(message)
         print("-- Technical Error Message -- ")
-        print(Exception.__doc__)
-        print(Exception.__str__())
+        print(error)
+        print(type(error))
+        print(error.__doc__)
+        print(error.__str__())
     @staticmethod
     def output_student_courses(student_data: list):
         """
