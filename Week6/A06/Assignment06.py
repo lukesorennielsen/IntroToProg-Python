@@ -2,9 +2,9 @@
 # Title: Assignment06_Starter
 # Desc: This assignment demonstrates using functions
 # with structured error handling
-# Change Log: (Who, When, What)
-#   RRoot,1/1/2030,Created Script
-#   <Your Name Here>,<Date>,<Activity>
+# Change Log: (<Soren>,<11-18-2024>,<updated to include functions and classes>)
+#   RRoot,11-18-2024,Created Script
+#   <Soren>,<11-18-2024>,<updated to include functions and classes>
 # ------------------------------------------------------------------------------------------ #
 import json
 
@@ -40,7 +40,6 @@ class FileProcessor:
     """
     a collection of functions that handles the reading and writing of data from files
     """
-
     @staticmethod
     def read_data_from_file(file_name: str, student_data: list):
         """
@@ -49,6 +48,7 @@ class FileProcessor:
         :param student_data: the list of data to be written
         """
         global students
+        global file
         try:
             file = open(file_name, "r")
 
@@ -58,7 +58,7 @@ class FileProcessor:
         except Exception as e:
             IO.output_error_messages("Error: There was a problem with reading the file.", e)
         finally:
-            if file.closed == False:
+            if  file and not file.closed:
                 file.close()
     @staticmethod
     def write_data_to_file(file_name: str, student_data: list):
@@ -67,6 +67,7 @@ class FileProcessor:
         :param file_name: The name of the file to be written to
         :param student_data: a list of data to be written to the file
         """
+        global file
         try:
             file = open(file_name, "w")
 
@@ -81,7 +82,6 @@ class FileProcessor:
             if file.closed == False:
                 file.close()
             IO.output_error_messages("Error: There was a problem with writing to the file.", e)
-
 
 class IO:
     """
