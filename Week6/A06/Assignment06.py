@@ -69,7 +69,7 @@ class IO:
     def input_menu_choice():
         global menu_choice
         menu_choice = input("What would you like to do: ")
-
+    @staticmethod
     def output_menu(menu: str):
         print(menu)
 
@@ -87,7 +87,6 @@ while (True):
     # Present the menu of choices
     IO.output_menu(MENU)
     IO.input_menu_choice()
-
 
     # Input user data
     if menu_choice == "1":  # This will not work if it is an integer!
