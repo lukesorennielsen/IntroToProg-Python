@@ -47,11 +47,7 @@ class FileProcessor:
             students = student_data
             file.close()
         except Exception as e:
-            print("Error: There was a problem with reading the file.")
-            print("Please check that the file exists and that it is in a json format.")
-            print("-- Technical Error Message -- ")
-            print(e.__doc__)
-            print(e.__str__())
+            IO.output_error_messages("Error: There was a problem with reading the file.", e)
         finally:
             if file.closed == False:
                 file.close()
@@ -70,11 +66,8 @@ class FileProcessor:
         except Exception as e:
             if file.closed == False:
                 file.close()
-            print("Error: There was a problem with writing to the file.")
-            print("Please check that the file is not open by another program.")
-            print("-- Technical Error Message -- ")
-            print(e.__doc__)
-            print(e.__str__())
+            IO.output_error_messages("Error: There was a problem with writing to the file.", e)
+
 
 class IO:
     @staticmethod
@@ -84,7 +77,7 @@ class IO:
     @staticmethod
     def output_menu(menu: str):
         print(menu)
-
+    @staticmethod
     def input_student_data(student_data: list):
         try:
             student_first_name = input("Enter the student's first name: ")
@@ -105,12 +98,14 @@ class IO:
             print(e.__doc__)
             print(e.__str__())
         except Exception as e:
-            print("Error: There was a problem with your entered data.")
-            print("-- Technical Error Message -- ")
-            print(e.__doc__)
-            print(e.__str__())
+            IO.output_error_messages("Error: There was a problem with your entered data.", e)
+    @staticmethod
     def output_error_messages(message: str, error: Exception = None):
-        return
+        print(message)
+        print("-- Technical Error Message -- ")
+        print(Exception.__doc__)
+        print(Exception.__str__())
+    @staticmethod
     def output_student_courses(student_data: list):
         print("-" * 50)
         for student in student_data:
