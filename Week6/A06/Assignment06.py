@@ -55,6 +55,9 @@ class FileProcessor:
             student_data = json.load(file)
             students = student_data
             file.close()
+        except FileNotFoundError as e:
+            print("File was not found")
+            print(e, e.__doc__, e, type(e), sep="\n")
         except Exception as e:
             IO.output_error_messages("Error: There was a problem with reading the file.", e)
         finally:
