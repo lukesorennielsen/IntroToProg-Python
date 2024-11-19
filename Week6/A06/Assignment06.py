@@ -37,8 +37,17 @@ menu_choice: str  # Hold the choice made by the user.
 # Extract the data from the file
 
 class FileProcessor:
+    """
+    a collection of functions that handles the reading and writing of data from files
+    """
+
     @staticmethod
     def read_data_from_file(file_name: str, student_data: list):
+        """
+        This function handles reading data from a json file
+        :param file_name: the static filename to be written to
+        :param student_data: the list of data to be written
+        """
         global students
         try:
             file = open(file_name, "r")
@@ -53,6 +62,11 @@ class FileProcessor:
                 file.close()
     @staticmethod
     def write_data_to_file(file_name: str, student_data: list):
+        """
+        This function handles writing data to the json file.
+        :param file_name: The name of the file to be written to
+        :param student_data: a list of data to be written to the file
+        """
         try:
             file = open(file_name, "w")
 
@@ -70,15 +84,29 @@ class FileProcessor:
 
 
 class IO:
+    """
+    A collection of functions that handles the input and output of user data
+    """
     @staticmethod
     def input_menu_choice():
+        """
+        this function prompts the user to input a menu choice as a string input
+        """
         global menu_choice
         menu_choice = input("What would you like to do: ")
     @staticmethod
     def output_menu(menu: str):
+        """
+        this function prints the main menu of the program for the user
+        :param menu: the string that holds the printed menu
+        """
         print(menu)
     @staticmethod
     def input_student_data(student_data: list):
+        """
+        This function manages the input of student data
+        :param student_data: the list of data to be updated
+        """
         try:
             student_first_name = input("Enter the student's first name: ")
             if not student_first_name.isalpha():
@@ -101,12 +129,21 @@ class IO:
             IO.output_error_messages("Error: There was a problem with your entered data.", e)
     @staticmethod
     def output_error_messages(message: str, error: Exception = None):
+        """
+        this function handles printing error messages
+        :param message: the custom error message to be printed to the console
+        :param error: the error data
+        """
         print(message)
         print("-- Technical Error Message -- ")
         print(Exception.__doc__)
         print(Exception.__str__())
     @staticmethod
     def output_student_courses(student_data: list):
+        """
+        This function displays student data to the user.
+        :param student_data: the list of student data to be printed.
+        """
         print("-" * 50)
         for student in student_data:
             print(f'Student {student["FirstName"]} '
