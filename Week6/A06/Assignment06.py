@@ -86,7 +86,29 @@ class IO:
         print(menu)
 
     def input_student_data(student_data: list):
-        return
+        try:
+            student_first_name = input("Enter the student's first name: ")
+            if not student_first_name.isalpha():
+                raise ValueError("The last name should not contain numbers.")
+            student_last_name = input("Enter the student's last name: ")
+            if not student_last_name.isalpha():
+                raise ValueError("The last name should not contain numbers.")
+            course_name = input("Please enter the name of the course: ")
+            students_data = {"FirstName": student_first_name,
+                            "LastName": student_last_name,
+                            "CourseName": course_name}
+            student_data.append(students_data)
+            print(f"You have registered {student_first_name} {student_last_name} for {course_name}.")
+        except ValueError as e:
+            print(e)  # Prints the custom message
+            print("-- Technical Error Message -- ")
+            print(e.__doc__)
+            print(e.__str__())
+        except Exception as e:
+            print("Error: There was a problem with your entered data.")
+            print("-- Technical Error Message -- ")
+            print(e.__doc__)
+            print(e.__str__())
     def output_error_messages(message: str, error: Exception = None):
         return
     def output_student_courses(student_data: list):
@@ -108,30 +130,7 @@ while (True):
 
     # Input user data
     if menu_choice == "1":  # This will not work if it is an integer!
-
-        try:
-            student_first_name = input("Enter the student's first name: ")
-            if not student_first_name.isalpha():
-                raise ValueError("The last name should not contain numbers.")
-            student_last_name = input("Enter the student's last name: ")
-            if not student_last_name.isalpha():
-                raise ValueError("The last name should not contain numbers.")
-            course_name = input("Please enter the name of the course: ")
-            student_data = {"FirstName": student_first_name,
-                            "LastName": student_last_name,
-                            "CourseName": course_name}
-            students.append(student_data)
-            print(f"You have registered {student_first_name} {student_last_name} for {course_name}.")
-        except ValueError as e:
-            print(e)  # Prints the custom message
-            print("-- Technical Error Message -- ")
-            print(e.__doc__)
-            print(e.__str__())
-        except Exception as e:
-            print("Error: There was a problem with your entered data.")
-            print("-- Technical Error Message -- ")
-            print(e.__doc__)
-            print(e.__str__())
+        IO.input_student_data(students)
         continue
 
     # Present the current data
@@ -141,7 +140,6 @@ while (True):
 
     # Save the data to a file
     elif menu_choice == "3":
-
         FileProcessor.write_data_to_file(FILE_NAME, students)
         continue
 
