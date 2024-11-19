@@ -67,7 +67,17 @@ class FileProcessor:
 class IO:
     @staticmethod
     def input_menu_choice():
-        ##do this last
+        global menu_choice
+        menu_choice = input("What would you like to do: ")
+
+    def output_menu(menu: str):
+        print(menu)
+
+    def input_student_data(student_data: list):
+        return
+    def output_error_messages(message: str, error: Exception = None):
+        return
+    def output_student_courses(student_data: list):
         return
 
 FileProcessor.read_data_from_file(FILE_NAME, students)
@@ -75,8 +85,9 @@ FileProcessor.read_data_from_file(FILE_NAME, students)
 while (True):
 
     # Present the menu of choices
-    print(MENU)
-    menu_choice = input("What would you like to do: ")
+    IO.output_menu(MENU)
+    IO.input_menu_choice()
+
 
     # Input user data
     if menu_choice == "1":  # This will not work if it is an integer!
