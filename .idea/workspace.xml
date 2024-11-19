@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d3119aed-04c0-413f-9231-85369d1821df" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Week6/Week6 notes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week5/A05/Enrollments.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Week5/A05/Enrollments.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week6/A06/Assignment06.py" beforeDir="false" afterPath="$PROJECT_DIR$/Week6/A06/Assignment06.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week6/A06/Enrollments.json" beforeDir="false" afterPath="$PROJECT_DIR$/Week6/A06/Enrollments.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +24,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
@@ -36,8 +38,10 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Python.Assignment05.executor": "Run",
+    "Python.Assignment06.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Assignment__05",
+    "git-widget-placeholder": "Assignment-06",
+    "last_opened_file_path": "/Volumes/Project Drive/Github Repos/PythonHomework/Week6/A06",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -47,6 +51,9 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Week6/A06" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -70,13 +77,28 @@
       <workItem from="1731390619601" duration="20000" />
       <workItem from="1731390788540" duration="72000" />
       <workItem from="1731461895226" duration="9129000" />
+      <workItem from="1731708280148" duration="99000" />
+      <workItem from="1731966801706" duration="633000" />
+      <workItem from="1731971437004" duration="12603000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Assignment05_py$Assignment05.coverage" NAME="Assignment05 Coverage Results" MODIFIED="1731467617449" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Week5/A05" />
+    <SUITE FILE_PATH="coverage/Assignment06_py$Assignment06.coverage" NAME="Assignment06 Coverage Results" MODIFIED="1731986693319" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Week6/A06" />
   </component>
 </project>
