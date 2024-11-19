@@ -78,7 +78,7 @@
       <workItem from="1731461895226" duration="9129000" />
       <workItem from="1731708280148" duration="99000" />
       <workItem from="1731966801706" duration="633000" />
-      <workItem from="1731971437004" duration="3536000" />
+      <workItem from="1731971437004" duration="3785000" />
     </task>
     <servers />
   </component>
@@ -93,11 +93,16 @@
           <line>41</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Week6/A06/Assignment06.py</url>
+          <line>109</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Assignment05_py$Assignment05.coverage" NAME="Assignment05 Coverage Results" MODIFIED="1731467617449" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Week5/A05" />
-    <SUITE FILE_PATH="coverage/Assignment06_py$Assignment06.coverage" NAME="Assignment06 Coverage Results" MODIFIED="1731974930172" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Week6/A06" />
+    <SUITE FILE_PATH="coverage/Assignment06_py$Assignment06.coverage" NAME="Assignment06 Coverage Results" MODIFIED="1731975118299" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Week6/A06" />
   </component>
 </project>

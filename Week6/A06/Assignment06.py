@@ -57,12 +57,24 @@ class FileProcessor:
                 file.close()
     @staticmethod
     def write_data_to_file(file_name: str, student_data: list):
-        # Process the data to create and display a custom message
-        print("-" * 50)
-        for student in student_data:
-            print(f'Student {student["FirstName"]} '
-                  f'{student["LastName"]} is enrolled in {student["CourseName"]}')
-        print("-" * 50)
+        try:
+            file = open(file_name, "w")
+
+            json.dump(student_data, file)
+
+            file.close()
+            print("The following data was saved to file!")
+            for student in student_data:
+                print(f'Student {student["FirstName"]} '
+                      f'{student["LastName"]} is enrolled in {student["CourseName"]}')
+        except Exception as e:
+            if file.closed == False:
+                file.close()
+            print("Error: There was a problem with writing to the file.")
+            print("Please check that the file is not open by another program.")
+            print("-- Technical Error Message -- ")
+            print(e.__doc__)
+            print(e.__str__())
 
 class IO:
     @staticmethod
@@ -78,7 +90,13 @@ class IO:
     def output_error_messages(message: str, error: Exception = None):
         return
     def output_student_courses(student_data: list):
-        return
+        print("-" * 50)
+        for student in student_data:
+            print(f'Student {student["FirstName"]} '
+                  f'{student["LastName"]} is enrolled in {student["CourseName"]}')
+        print("-" * 50)
+
+
 
 FileProcessor.read_data_from_file(FILE_NAME, students)
 # Present and Process the data
@@ -118,35 +136,13 @@ while (True):
 
     # Present the current data
     elif menu_choice == "2":
-        FileProcessor.write_data_to_file(FILE_NAME, students)
+        IO.output_student_courses(students)
         continue
 
     # Save the data to a file
     elif menu_choice == "3":
 
-        try:
-            file = open(FILE_NAME, "w")
-            # CSV answer
-            # for student in students:
-            #     csv_data = f'{student["FirstName"]},{student["LastName"]},{student["CourseName"]}\n'
-            #     file.write(csv_data)
-
-            # # JSON answer
-            json.dump(students, file)
-
-            file.close()
-            print("The following data was saved to file!")
-            for student in students:
-                print(f'Student {student["FirstName"]} '
-                      f'{student["LastName"]} is enrolled in {student["CourseName"]}')
-        except Exception as e:
-            if file.closed == False:
-                file.close()
-            print("Error: There was a problem with writing to the file.")
-            print("Please check that the file is not open by another program.")
-            print("-- Technical Error Message -- ")
-            print(e.__doc__)
-            print(e.__str__())
+        FileProcessor.write_data_to_file(FILE_NAME, students)
         continue
 
     # Stop the loop
