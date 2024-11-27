@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d3119aed-04c0-413f-9231-85369d1821df" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week6/A06/Assignment06.py" beforeDir="false" afterPath="$PROJECT_DIR$/Week6/A06/Assignment06.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,21 +33,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.Assignment05.executor": "Run",
-    "Python.Assignment06.executor": "Debug",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Week7",
-    "last_opened_file_path": "/Volumes/Project Drive/Github Repos/PythonHomework/Week6/A06",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.Assignment05.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Assignment06.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Week7&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Volumes/Project Drive/Github Repos/PythonHomework/Week6/A06&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Week6/A06" />
@@ -79,7 +78,8 @@
       <workItem from="1731708280148" duration="99000" />
       <workItem from="1731966801706" duration="633000" />
       <workItem from="1731971437004" duration="12603000" />
-      <workItem from="1732056618586" duration="5404000" />
+      <workItem from="1732056618586" duration="7434000" />
+      <workItem from="1732741740937" duration="32000" />
     </task>
     <servers />
   </component>
@@ -104,11 +104,6 @@
           <url>file://$PROJECT_DIR$/Week6/A06/Assignment06.py</url>
           <line>163</line>
           <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Week6/A06/Assignment06.py</url>
-          <line>121</line>
-          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
