@@ -18,25 +18,8 @@ MENU: str = '''
     4. Exit the program.
 ----------------------------------------- 
 '''
+#constants
 FILE_NAME: str = "Enrollments.json"
-
-# Define the Data Variables
-students: list = []  # a table of student data
-menu_choice: str  # Hold the choice made by the user.
-
-
-# DONE Create a Person Class
-# DONE Add first_name and last_name properties to the constructor
-# TODO Create a getter and setter for the first_name property
-# TODO Create a getter and setter for the last_name property
-# TODO Override the __str__() method to return Person data
-
-# TODO Create a Student class the inherits from the Person class
-# TODO call to the Person constructor and pass it the first_name and last_name data
-# TODO add a assignment to the course_name property using the course_name parameter
-# TODO add the getter for course_name
-# TODO add the setter for course_name
-# TODO Override the __str__() method to return the Student data
 
 # People --------------------------------------- #
 class Person:
@@ -85,17 +68,18 @@ class Person:
         """
         return f"{self.first_name},{self.last_name}"
 
+# Students --------------------------------------- #
 class Student(Person):
     def __init__(self, first_name: str, last_name: str, course_name: str):
         super().__init__(first_name,last_name)
-        self._course_name = course_name
+        self.course_name = course_name
     @property
     def course_name(self)->str:
         """
         returns the course name
         :return: course name
         """
-        return self._course_name
+        return self._course_name.title()
     @course_name.setter
     def course_name(self, value: str):
         """
@@ -111,14 +95,6 @@ class Student(Person):
         :return: first name, last name, course name, as string
         """
         return f"{super().first_name},{super().last_name},{self.course_name}"
-
-p = Student("soren","nielsen","Python 100")
-print(p.first_name)
-print(p.last_name)
-print(p.course_name)
-print(p)
-
-
 
 # Processing --------------------------------------- #
 class FileProcessor:
@@ -178,7 +154,6 @@ class FileProcessor:
         finally:
             if file.closed == False:
                 file.close()
-
 
 # Presentation --------------------------------------- #
 class IO:
@@ -292,6 +267,9 @@ class IO:
             IO.output_error_messages(message="Error: There was a problem with your entered data.", error=e)
         return student_data
 
+# Define the Data Variables
+students: list[Student] = []  # a table of student data
+menu_choice: str  # Hold the choice made by the user.
 
 # Start of main body
 
