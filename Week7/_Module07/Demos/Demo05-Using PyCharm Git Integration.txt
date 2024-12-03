@@ -1,0 +1,13 @@
+Use the VCS > Create Git Repository... menu option.
+Notice:
+•	A new menu option named "Git" appeared, providing Git-related functionalities.
+•	Additionally, a corresponding toolbar named "Git" was added, offering convenient Git-related actions and features.
+•	On the left side of the PyCharm interface, a new tab named "Commit" was added, providing a dedicated space for managing and tracking commits.
+
+1.	Navigate to the "File" menu in PyCharm.
+2.	Choose "Settings" from the menu options.
+3.	Within the Settings window, select "GitHub."
+4.	Click on the "+" button to add a new GitHub account.
+5.	A GitHub authorization prompt will appear; select "Authorize in GitHub" to link your PyCharm installation to your GitHub account.
+6.  Use the "Git" menu item in PyCharm to share your project directly on GitHub.
+7.  Go to GitHub and view the page.

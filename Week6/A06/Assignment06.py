@@ -30,7 +30,7 @@ student_data: dict = {}  # one row of student data
 students: list = []  # a table of student data
 csv_data: str = ''  # Holds combined string data separated by a comma.
 json_data: str = ''  # Holds combined string data in a json format.
-file = None  # Holds a reference to an opened file.
+
 menu_choice: str  # Hold the choice made by the user.
 
 # When the program starts, read the file data into a list of lists (table)
@@ -47,13 +47,11 @@ class FileProcessor:
         :param file_name: the static filename to be written to
         :param student_data: the list of data to be written
         """
-        global students
-        global file
+
         try:
             file = open(file_name, "r")
 
-            student_data = json.load(file)
-            students = student_data
+            student_data.extend(json.load(file))
             file.close()
         except FileNotFoundError as e:
             print("File was not found")
@@ -70,7 +68,7 @@ class FileProcessor:
         :param file_name: The name of the file to be written to
         :param student_data: a list of data to be written to the file
         """
-        global file
+
         try:
             file = open(file_name, "w")
 
