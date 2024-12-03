@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d3119aed-04c0-413f-9231-85369d1821df" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week7/A07/A07.py" beforeDir="false" afterPath="$PROJECT_DIR$/Week7/A07/A07.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week7/A07/Enrollments.json" beforeDir="false" afterPath="$PROJECT_DIR$/Week7/A07/Enrollments.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +85,7 @@
       <workItem from="1732741740937" duration="32000" />
       <workItem from="1733182449530" duration="47000" />
       <workItem from="1733182652063" duration="26000" />
-      <workItem from="1733182710882" duration="14378000" />
+      <workItem from="1733182710882" duration="15932000" />
     </task>
     <servers />
   </component>
@@ -116,7 +116,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Assignment06_py$Assignment06.coverage" NAME="Assignment06 Coverage Results" MODIFIED="1732069617048" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Week6/A06" />
-    <SUITE FILE_PATH="coverage/A07_py$A07.coverage" NAME="A07 Coverage Results" MODIFIED="1733206367109" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Week7/A07" />
+    <SUITE FILE_PATH="coverage/A07_py$A07.coverage" NAME="A07 Coverage Results" MODIFIED="1733208955027" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Week7/A07" />
     <SUITE FILE_PATH="coverage/Assignment05_py$Assignment05.coverage" NAME="Assignment05 Coverage Results" MODIFIED="1731467617449" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Week5/A05" />
   </component>
 </project>
