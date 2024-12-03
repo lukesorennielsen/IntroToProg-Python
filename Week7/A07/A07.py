@@ -105,7 +105,7 @@ class FileProcessor:
     RRoot,1.1.2030,Created Class
     """
     @staticmethod
-    def read_data_from_file(file_name: str, student_data: list):
+    def read_data_from_file(file_name: str, student_data: list[Student])->list[Student]:
         """ This function reads data from a json file and loads it into a list of dictionary rows
 
         ChangeLog: (Who, When, What)
@@ -116,21 +116,28 @@ class FileProcessor:
 
         :return: list
         """
-
+        file_data=[]
+        file=None
         try:
             file = open(file_name, "r")
-            student_data = json.load(file)
+            file_data = json.load(file)
             file.close()
         except Exception as e:
             IO.output_error_messages(message="Error: There was a problem with reading the file.", error=e)
 
         finally:
-            if file.closed == False:
+            if file is not None and not file.closed:
                 file.close()
+
+        for row in file_data:
+            student_data.append(
+                Student(row['first_name'],row['last_name'],row['course_name'])
+            )
+
         return student_data
 
     @staticmethod
-    def write_data_to_file(file_name: str, student_data: list):
+    def write_data_to_file(file_name: str, student_data: list[Student]):
         """ This function writes data to a json file with data from a list of dictionary rows
 
         ChangeLog: (Who, When, What)
@@ -141,10 +148,17 @@ class FileProcessor:
 
         :return: None
         """
+        file_data=[]
+        for student in student_data:
+            file_data.append({
+                "first_name":student.first_name,
+                "last_name":student.last_name,
+                "course_name":student.course_name})
 
+        file=None
         try:
             file = open(file_name, "w")
-            json.dump(student_data, file)
+            json.dump(file_data, file)
             file.close()
             IO.output_student_and_course_names(student_data=student_data)
         except Exception as e:
@@ -152,7 +166,7 @@ class FileProcessor:
             message += "Please check that the file is not open by another program."
             IO.output_error_messages(message=message,error=e)
         finally:
-            if file.closed == False:
+            if file is not None and not file.closed:
                 file.close()
 
 # Presentation --------------------------------------- #
@@ -218,7 +232,7 @@ class IO:
         return choice
 
     @staticmethod
-    def output_student_and_course_names(student_data: list):
+    def output_student_and_course_names(student_data: list[Student]):
         """ This function displays the student and course names to the user
 
         ChangeLog: (Who, When, What)
@@ -231,12 +245,12 @@ class IO:
 
         print("-" * 50)
         for student in student_data:
-            print(f'Student {student["FirstName"]} '
-                  f'{student["LastName"]} is enrolled in {student["CourseName"]}')
+            print(f'Student {student.first_name} '
+                  f'{student.last_name} is enrolled in {student.course_name}')
         print("-" * 50)
 
     @staticmethod
-    def input_student_data(student_data: list):
+    def input_student_data(student_data: list[Student])->list[Student]:
         """ This function gets the student's first name and last name, with a course name from the user
 
         ChangeLog: (Who, When, What)
@@ -249,15 +263,9 @@ class IO:
 
         try:
             student_first_name = input("Enter the student's first name: ")
-            if not student_first_name.isalpha():
-                raise ValueError("The last name should not contain numbers.")
             student_last_name = input("Enter the student's last name: ")
-            if not student_last_name.isalpha():
-                raise ValueError("The last name should not contain numbers.")
             course_name = input("Please enter the name of the course: ")
-            student = {"FirstName": student_first_name,
-                            "LastName": student_last_name,
-                            "CourseName": course_name}
+            student = Student(student_first_name,student_last_name,course_name)
             student_data.append(student)
             print()
             print(f"You have registered {student_first_name} {student_last_name} for {course_name}.")
