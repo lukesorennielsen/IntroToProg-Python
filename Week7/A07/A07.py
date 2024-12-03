@@ -2,9 +2,9 @@
 # Title: Assignment07
 # Desc: This assignment demonstrates using data classes
 # with structured error handling
-# Change Log: (Who, When, What)
+# Change Log: (<Soren>,<12/2/2024>,<updated document>)
 #   RRoot,1/1/2030,Created Script
-#   <Your Name Here>,<Date>,<Activity>
+#   <Soren>,<12/2/2024>,<updated document>
 # ------------------------------------------------------------------------------------------ #
 import json
 

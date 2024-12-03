@@ -7,7 +7,6 @@
     <list default="true" id="d3119aed-04c0-413f-9231-85369d1821df" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Week7/A07/A07.py" beforeDir="false" afterPath="$PROJECT_DIR$/Week7/A07/A07.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week7/A07/Enrollments.json" beforeDir="false" afterPath="$PROJECT_DIR$/Week7/A07/Enrollments.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +85,7 @@
       <workItem from="1732741740937" duration="32000" />
       <workItem from="1733182449530" duration="47000" />
       <workItem from="1733182652063" duration="26000" />
-      <workItem from="1733182710882" duration="13525000" />
+      <workItem from="1733182710882" duration="14378000" />
     </task>
     <servers />
   </component>
