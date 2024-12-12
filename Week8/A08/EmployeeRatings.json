@@ -1,1 +1,1 @@
-[{"first_name": "Archer", "last_name": "Adams", "course_name": "Python 100"}, {"first_name": "Betty", "last_name": "Barnes", "course_name": "Python 200"}, {"first_name": "Cathy", "last_name": "Carter", "course_name": "Python 300"}, {"first_name": "Derrick", "last_name": "Domino", "course_name": "Python 400"}, {"first_name": "Edith", "last_name": "Edwards", "course_name": "Python 500"}]
+[{"FirstName": "John", "LastName": "Doe", "ReviewDate": "2030-01-01", "ReviewRating": 5}, {"FirstName": "Soren", "LastName": "Nielsen", "ReviewDate": "2020-10-10", "ReviewRating": 2}]
