@@ -26,13 +26,6 @@ MENU: str = '''
 employees: list = []  # a table of employee data
 menu_choice = ''
 
-
-
-
-
-
-
-
 # Beginning of the main body of this script
 employees = FileProcessor.read_employee_data_from_file(file_name=FILE_NAME,
                                                        employee_data=employees,

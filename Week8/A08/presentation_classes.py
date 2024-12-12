@@ -93,7 +93,7 @@ class IO:
             elif employee.review_rating == 2:
                 message = " {} {} is rated as 2 (Building)"
             elif employee.review_rating == 1:
-                message = " {} {} is rated as 1 (Not Meeting Expectations"
+                message = " {} {} is rated as 1 (Not Meeting Expectations)"
 
             print(message.format(employee.first_name, employee.last_name, employee.review_date, employee.review_rating))
         print("-" * 50)
