@@ -7,7 +7,7 @@
 
 import unittest
 
-from Week8.A08.main import employees
+
 from data_classes import Person,Employee
 
 
@@ -35,6 +35,7 @@ class TestEmployee(unittest.TestCase):
         self.assertEqual("Vu", employee.last_name)
         self.assertEqual("1900-01-01", employee.review_date)
         self.assertEqual(5, employee.review_rating)
+
     def test_employee_date(self):
         with self.assertRaises(ValueError):
             employee =Employee("Vic","Vu","March 2021",5)
