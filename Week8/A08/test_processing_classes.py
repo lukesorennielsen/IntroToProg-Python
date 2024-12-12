@@ -39,6 +39,21 @@ class TestFileProcessor(unittest.TestCase):
         self.assertEqual(sample_data[1]["LastName"], employees[1].last_name)
         self.assertEqual(sample_data[1]["ReviewDate"], employees[1].review_date)
         self.assertEqual(sample_data[1]["ReviewRating"], employees[1].review_rating)
+    def test_write_Data_to_file(self):
+        sample_data=[
+            Employee("Vic","Vu","1900-01-01",5),
+            Employee("Soren","Nielsen","2020-02-02",3)
+        ]
+        FileProcessor.write_employee_data_to_file(self.temp_file_name,sample_data)
+        with open(self.temp_file_name,'r') as file:
+            file_data=json.load(file)
+        self.assertEqual(len(sample_data), len(file_data))
+        for i in range(len(sample_data)):
+            self.assertEqual(sample_data[i].first_name,file_data[i]["FirstName"])
+            self.assertEqual(sample_data[i].last_name, file_data[i]["LastName"])
+            self.assertEqual(sample_data[i].review_date, file_data[i]["ReviewDate"])
+            self.assertEqual(sample_data[i].review_rating, file_data[i]["ReviewRating"])
+
 
 
 
